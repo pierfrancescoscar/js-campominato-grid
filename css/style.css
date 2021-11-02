@@ -50,10 +50,18 @@ label {
 
 main {
     display: flex;
-    flex-grow: 1;
     height: 100vh;
     background-color: goldenrod;
+}
 
+/* Grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 2px solid white;
 }
 
 /* Footer */
