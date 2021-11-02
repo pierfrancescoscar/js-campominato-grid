@@ -10,32 +10,71 @@ const playBtn = document.querySelector('.play');
 const chooseLevel = document.getElementById('difficoltà');
 const wrapGrid = document.querySelector('.wrap-grid');
 
+
+
 // Set grid
+playBtn.addEventListener('click', () => {
+    // Reset content
+    wrapGrid.innerHTML = '';
+    // // Set grid dimension
+    const gridDimension = chooseLevel.value;
+    let squareNumber;
+    let squarePerSide;
+    
+    switch (gridDimension) {
+        case '1':
+            squareNumber = 100;
+            squarePerSide = 10;
+            break;
+        case '2':
+            squareNumber = 81;
+            squarePerSide = 9;
+            break;
+        case '3':
+            squareNumber = 49;
+            squarePerSide = 7;
+    }
 
-const grid = document.createElement('div');
-grid.classList.add('grid');
+        // Set grid with element html
 
-// Insert grid
+        const grid = document.createElement('div');
+        grid.classList.add('grid');
 
-wrapGrid.append(grid);
+        // Insert grid
 
-// Set grid dimension
+        wrapGrid.append(grid);
 
-const gridDimension = chooseLevel.value;
-let squareNumber;
-let squarePerSide;
+        // Gen grid square
 
-switch (gridDimension) {
-    case '1':
-        squareNumber = 100;
-        squarePerSide = 10;
-        break;
-    case '2':
-        squareNumber = 81;
-        squarePerSide = 9;
-        break;
-    case '3':
-        squareNumber = 49;
-        squarePerSide = 7;
+        for (let i = 1; i <= squareNumber; i++) {
+            const squareList = i;
+            const square = createGridSquare(squareList, squarePerSide);
+            grid.append(square);
+        }
+
+})
+
+// Functions
+
+function createGridSquare(num, squares) {
+
+    // Create node square
+    const node = document.createElement('div');
+    node.classList.add('square');
+    node.style.width = `calc(100% / ${squares})`;
+    node.style.height = `calc(100% / ${squares})`;
+
+    // Create node text
+    const span = document.createElement('span');
+    span.append(num);
+
+    // Square + text
+    node.append(span);
+
+    return node;
 }
+
+
+
+
 

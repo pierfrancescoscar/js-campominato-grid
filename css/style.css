@@ -6,6 +6,13 @@
     font-family: sans-serif;
 }
 
+body {
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Header */
 header {
     display: flex;
@@ -49,19 +56,28 @@ label {
 /* Main */
 
 main {
-    display: flex;
-    height: 100vh;
+    flex-grow: 1;
     background-color: goldenrod;
 }
 
 /* Grid */
+
 .grid {
     display: flex;
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
     margin: 50px auto;
-    border: 2px solid white;
+    border: 2px solid black;
+}
+
+/* Square */
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    cursor: pointer;
 }
 
 /* Footer */
