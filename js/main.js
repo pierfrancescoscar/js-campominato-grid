@@ -50,9 +50,16 @@ playBtn.addEventListener('click', () => {
             const squareList = i;
             const square = createGridSquare(squareList, squarePerSide);
             grid.append(square);
+            square.addEventListener('click', function () {
+                this.classList.add('clicked');
+            })
         }
 
 })
+
+// Gen click event to square
+
+
 
 // Functions
 
