@@ -5,10 +5,10 @@
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 // Refs
+
 const playBtn = document.querySelector('.play');
 const chooseLevel = document.getElementById('difficoltà');
 const wrapGrid = document.querySelector('.wrap-grid');
-
 
 // Set grid
 
@@ -16,4 +16,26 @@ const grid = document.createElement('div');
 grid.classList.add('grid');
 
 // Insert grid
+
 wrapGrid.append(grid);
+
+// Set grid dimension
+
+const gridDimension = chooseLevel.value;
+let squareNumber;
+let squarePerSide;
+
+switch (gridDimension) {
+    case '1':
+        squareNumber = 100;
+        squarePerSide = 10;
+        break;
+    case '2':
+        squareNumber = 81;
+        squarePerSide = 9;
+        break;
+    case '3':
+        squareNumber = 49;
+        squarePerSide = 7;
+}
+
