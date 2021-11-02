@@ -6,11 +6,6 @@
     font-family: sans-serif;
 }
 
-body {
-    background-color: goldenrod;
-    
-}
-
 /* Header */
 header {
     display: flex;
@@ -49,5 +44,19 @@ label {
 
 .play {
     padding: 0px 20px;
+}
+
+/* Main */
+
+main {
+    background-color: goldenrod;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    display: flex;
+    align-content: flex-end;
+    font-size: 14px;
 }
 
