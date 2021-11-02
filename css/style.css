@@ -1,8 +1,53 @@
 /* General Settings */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+body {
+    background-color: goldenrod;
+    
+}
+
+/* Header */
+header {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+}
+
+header .left-header {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.left-header img {
+    width: 50px;
+    margin-right: 15px;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+label {
+    margin-right: 15px;
+}
+
+#difficoltà {
+    padding-right: 90px;
+    margin-right: 15px;
+}
+
+.play {
+    padding: 0px 20px;
+}
+
