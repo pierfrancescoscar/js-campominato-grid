@@ -34,7 +34,6 @@ playBtn.addEventListener('click', () => {
             squareNumber = 49;
             squarePerSide = 7;
     }
-
         // Set grid with element html
 
         const grid = document.createElement('div');
@@ -50,16 +49,13 @@ playBtn.addEventListener('click', () => {
             const squareList = i;
             const square = createGridSquare(squareList, squarePerSide);
             grid.append(square);
+            // Gen click event to square
             square.addEventListener('click', function () {
                 this.classList.add('clicked');
             })
         }
 
 })
-
-// Gen click event to square
-
-
 
 // Functions
 
